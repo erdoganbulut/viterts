@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Router from './routes';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -38,6 +40,17 @@ const App = () => {
           </a>
         </p>
       </header>
+      <main>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+        <Router />
+      </main>
     </div>
   );
 };
