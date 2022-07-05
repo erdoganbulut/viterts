@@ -7,13 +7,15 @@ import './App.scss';
 const App = () => {
   const [count, setCount] = useState(0);
 
+  const handleChangeCount = () => setCount((_count) => _count + 1);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={handleChangeCount}>
             count is: {count}
           </button>
         </p>
