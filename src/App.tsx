@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'antd';
 import Router from './routes';
 import logo from './logo.svg';
 import './App.scss';
@@ -15,9 +16,7 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={handleChangeCount}>
-            count is: {count}
-          </button>
+          <Button onClick={handleChangeCount}>count is: {count}</Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
