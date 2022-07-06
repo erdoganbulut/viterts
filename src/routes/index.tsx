@@ -1,4 +1,5 @@
 import React, { FunctionComponent, lazy, Suspense } from 'react';
+import { Spin } from 'antd';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
@@ -11,7 +12,7 @@ const Router: FunctionComponent = () => (
     <Route
       path="about"
       element={
-        <Suspense fallback={<>Loading....</>}>
+        <Suspense fallback={<Spin />}>
           <About />
         </Suspense>
       }
