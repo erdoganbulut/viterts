@@ -6,6 +6,7 @@ import './styles/vendors.scss';
 const App = () => (
   <div className="App">
     <main>
+      <p>App Works!</p>
       <ul>
         <li>
           <Link to="/">Home</Link>
