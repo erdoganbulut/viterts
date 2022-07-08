@@ -11,7 +11,8 @@
     "lint:eslint": "eslint 'src/**/*.{ts,tsx}'",
     "format:ts": "prettier --write 'src/**/*.{ts,tsx}' && yarn lint:eslint --fix",
     "format": "yarn run format:ts",
-    "format:check": "prettier -c 'src/**/*.{ts,tsx}'"
+    "format:check": "prettier -c 'src/**/*.{ts,tsx}'",
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
@@ -23,6 +24,12 @@
     "react-router-dom": "6"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.2.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
@@ -38,10 +45,33 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
     "prettier": "^2.7.1",
     "sass": "^1.53.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
     "vite-plugin-eslint": "^1.6.1"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
