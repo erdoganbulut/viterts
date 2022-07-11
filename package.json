@@ -15,6 +15,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.8.3",
     "antd": "^4.21.5",
     "bootstrap": "^5.1.3",
