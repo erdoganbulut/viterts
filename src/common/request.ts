@@ -1,4 +1,4 @@
-const apiBase = 'https://62cb4dbb3e924a012865c364.mockapi.io/';
+const apiBase = import.meta.env.VITE_API_BASE_URL;
 
 const defaultHeaders: HeadersInit = {
   'Content-Type': 'application/json;charset=UTF-8',
