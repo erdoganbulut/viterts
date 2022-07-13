@@ -26,7 +26,7 @@
 
 ```bash
 npx degit erdoganbulut/viterts my-viterts-app
-cd my-viters-app
+cd my-viterts-app
 yarn # If you don't have yarn installed, run: npm install -g yarn
 ```
 
