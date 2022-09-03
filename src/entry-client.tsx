@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { store } from './store';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.hydrateRoot(
+  document.getElementById('root')!,
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
