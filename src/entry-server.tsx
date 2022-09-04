@@ -5,13 +5,15 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 import { store } from './store';
 
-export const render = (url: any, context: any) =>
+export const render = (url: any) =>
   ReactDOMServer.renderToString(
-    <Provider store={store}>
-      <StaticRouter location={url} context={context}>
-        <App />
-      </StaticRouter>
-    </Provider>,
+    <React.StrictMode>
+      <Provider store={store}>
+        <StaticRouter location={url}>
+          <App />
+        </StaticRouter>
+      </Provider>
+    </React.StrictMode>,
   );
 
 export default render;
