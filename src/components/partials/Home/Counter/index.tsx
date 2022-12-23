@@ -15,7 +15,10 @@ const Counter = () => {
 
   return (
     <div>
-      <InputNumber value={count} onChange={(value: number) => dispatch(setAmount(value))} />
+      <InputNumber
+        value={count}
+        onChange={(value: number | null) => dispatch(setAmount(value || 0))}
+      />
       <Button onClick={() => dispatch(incrementAsync(1))}>Add Async</Button>
       <Button onClick={() => dispatch(incrementIfOdd(1))}>Add If Odd</Button>
     </div>
